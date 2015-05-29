@@ -95,6 +95,8 @@ public class ListActivity  extends ActionBarActivity{
 				try {
 					JSONArray jsonObj = new JSONArray(json);
 					
+					
+					oslist.clear();	
 
     				for(int i = 0; i < jsonObj.length(); i++){
     				JSONObject c = jsonObj.getJSONObject(i);
@@ -116,8 +118,12 @@ public class ListActivity  extends ActionBarActivity{
     				map.put(TAG_LAT, lat);
     				map.put(TAG_LONG, lon);
     				// adding contact to contact list
+    				
+    				
+    			
+    				
 					oslist.add(map);
-					
+    				
 					
 					
 					}
@@ -149,6 +155,8 @@ public class ListActivity  extends ActionBarActivity{
 						R.layout.item_list,
 						new String[] { TAG_ID,TAG_PRO_NAME,TAG_LAT, TAG_LONG }, new int[] {
 								R.id.item_idtxt,R.id.item_nametxt,R.id.item_lattxt, R.id.item_longtxt});
+				
+				
 
 				list.setAdapter(adapter);
 				
